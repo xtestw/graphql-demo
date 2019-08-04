@@ -1,0 +1,35 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+scalar Date
+
+type Query {
+  student(id:Int!):Student
+  students(pagination:Pagination):[Student]
+}
+
+type Mutation {
+  add(newStudent:NewStudent):Student
+}
+
+input Pagination{
+  index: Int!
+  size: Int!
+}
+
+input NewStudent{
+  name:String!
+  sex:Sex
+}
+
+type Student {
+  id: Int
+  name: String
+  sex: Sex
+  creation: Date
+}
+
+enum Sex{
+  MALE,FEMALE
+}

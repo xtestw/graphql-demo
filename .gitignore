@@ -1,0 +1,10 @@
+.idea
+*.iml
+*~
+*target/
+*swp
+*.dict
+*.bin
+*.py
+.vscode
+.DS_store
